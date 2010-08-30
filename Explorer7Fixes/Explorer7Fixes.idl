@@ -1,0 +1,43 @@
+/*SDOC**********************************************************************
+
+	Module:				Explorer7Fixes.idl
+
+	Copyright (C) 2010 Ian Prest
+
+	Description:	
+
+***********************************************************************EDOC*/
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(ca89839f-771c-8cad-4d1f-1f878bc1a770),
+	dual,
+	nonextensible,
+	helpstring("Explorer7Fixes Interface"),
+	pointer_default(unique)
+]
+interface IExplorer7FixesBHO : IDispatch{
+};
+
+[
+	uuid(25fd1ded-dabc-73b2-4c9e-d98ecfd96457),
+	version(1.0),
+	helpstring("Explorer7Fixes 1.0 Type Library")
+]
+library Explorer7FixesLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(f431bcb5-a626-6f99-45d1-ab4821b24e07),
+		helpstring("Explorer7Fixes BHO Class")
+	]
+	coclass Explorer7FixesBHO
+	{
+		[default] interface IExplorer7FixesBHO;
+	};
+};
+
+/*end of file*/

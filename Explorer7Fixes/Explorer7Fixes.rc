@@ -1,0 +1,74 @@
+/*SDOC**********************************************************************
+
+	Module:				Explorer7Fixes.rc
+
+	Copyright (C) 2010 Ian Prest
+
+	Description:	Resources
+
+***********************************************************************EDOC*/
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Ian Prest"
+            VALUE "FileDescription", ""
+            VALUE "FileVersion", "1, 0, 0, 0"
+            VALUE "InternalName", "Explorer7Fixes.dll"
+            VALUE "LegalCopyright", "Copyright (C) 2010 Ian Prest"
+            VALUE "OriginalFilename", "Explorer7Fixes.dll"
+            VALUE "ProductName", "Explorer7Fixes"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+1000 REGISTRY "Explorer7Fixes.rgs"
+1001 REGISTRY "ExplorerBHO.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TYPELIB
+//
+1 TYPELIB "Explorer7Fixes.tlb"
+
+
+/*end of file*/

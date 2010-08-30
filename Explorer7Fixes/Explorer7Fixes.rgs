@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Explorer7Fixes'
+		'Explorer7Fixes.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

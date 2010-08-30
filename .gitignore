@@ -1,0 +1,10 @@
+*.suo
+*.ncb
+*.vcproj.*.user
+Release/
+Debug/
+x64/
+Explorer7Fixes_h.h
+Explorer7Fixes_i.c
+Explorer7Fixes_p.c
+dlldata.c
