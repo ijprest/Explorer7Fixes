@@ -20,8 +20,8 @@ HINSTANCE g_Instance = NULL;
 class CExplorer7Fixes : public CAtlDllModuleT<CExplorer7Fixes>
 {
 public :
-	DECLARE_LIBID(LIBID_Explorer7FixesLib)
-	DECLARE_REGISTRY_APPID_RESOURCEID(IDR_EXPLORER7FIXES, "{fc587279-c98f-0f80-422e-cf3833b6c78e}")
+	DECLARE_LIBID( LIBID_Explorer7FixesLib )
+	DECLARE_REGISTRY_APPID_RESOURCEID( IDR_EXPLORER7FIXES, "{fc587279-c98f-0f80-422e-cf3833b6c78e}" )
 } _AtlModule;
 
 
@@ -37,14 +37,14 @@ extern "C" BOOL WINAPI DllMain( HINSTANCE hInstance, DWORD dwReason, LPVOID lpRe
 	if( dwReason == DLL_PROCESS_ATTACH )
 	{
 		wchar_t path[_MAX_PATH];
-		GetModuleFileName(NULL, path, _countof(path));
-		const wchar_t* exe = PathFindFileName(path);
+		GetModuleFileName( NULL, path, _countof(path) );
+		const wchar_t* exe = PathFindFileName( path );
 		g_bExplorerExe = (_wcsicmp(exe, L"explorer.exe") == 0 || _wcsicmp(exe, L"verclsid.exe") == 0);
 		if( _wcsicmp(exe, L"regsvr32.exe") != 0 && _wcsicmp(exe, L"msiexec.exe") != 0 && !g_bExplorerExe )
 			return FALSE;
 		g_Instance = hInstance;
 	}
-	return _AtlModule.DllMain(dwReason, lpReserved);
+	return _AtlModule.DllMain( dwReason, lpReserved );
 }
 
 
@@ -68,11 +68,11 @@ STDAPI DllCanUnloadNow()
 	Action:		Returns a class factory to create an object of the requested type
 
 ***********************************************************************EDOC*/
-STDAPI DllGetClassObject(REFCLSID rclsid, REFIID riid, LPVOID* ppv)
+STDAPI DllGetClassObject( REFCLSID rclsid, REFIID riid, LPVOID* ppv )
 {
 	if( !g_bExplorerExe )
 		return CLASS_E_CLASSNOTAVAILABLE;
-	return _AtlModule.DllGetClassObject(rclsid, riid, ppv);
+	return _AtlModule.DllGetClassObject( rclsid, riid, ppv );
 }
 
 
@@ -109,7 +109,7 @@ STDAPI DllUnregisterServer()
 	Action:		Adds/Removes entries to the system registry per user per machine
 
 ***********************************************************************EDOC*/
-STDAPI DllInstall(BOOL bInstall, LPCWSTR pszCmdLine)
+STDAPI DllInstall( BOOL bInstall, LPCWSTR pszCmdLine )
 {
 	static const wchar_t szUserSwitch[] = L"user";
 	if( pszCmdLine && _wcsnicmp(pszCmdLine, szUserSwitch, _countof(szUserSwitch)) == 0 )

@@ -1,6 +1,7 @@
 *.suo
 *.ncb
 *.vcproj.*.user
+*.aps
 Release/
 Debug/
 x64/

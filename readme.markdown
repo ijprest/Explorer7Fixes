@@ -41,6 +41,18 @@ registered.  e.g., one of:
 There is a batch file (<tt>uninstall.bat</tt>) that largely automates this 
 process.
 
+## Upgrading from a Previous Version
+
+To upgrade:
+* First uninstall the old version, following the process above.
+* Because any running copies of Explorer will still have the DLL locked, you 
+should then log out and log back on.
+* Finally, install the new version.
+
+## History
+
+* v1.0.0.1 - Fixed an issue (#1) where folder icon-size was being reset.
+* v1.0.0.0 - First public release.
 
 ## Acknowledgements
 
