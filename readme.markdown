@@ -44,6 +44,7 @@ process.
 ## Upgrading from a Previous Version
 
 To upgrade:
+
 * First uninstall the old version, following the process above.
 * Because any running copies of Explorer will still have the DLL locked, you 
 should then log out and log back on.
