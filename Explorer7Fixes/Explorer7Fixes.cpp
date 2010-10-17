@@ -17,7 +17,7 @@ class ATL_NO_VTABLE CExplorerBHO :
 	public CComObjectRootEx<CComSingleThreadModel>,
 	public CComCoClass<CExplorerBHO, &CLSID_Explorer7FixesBHO>,
 	public IObjectWithSiteImpl<CExplorerBHO>,
-	public IDispatchImpl<IExplorer7FixesBHO, &IID_IExplorer7FixesBHO, &LIBID_Explorer7FixesLib, /*wMajor =*/ 1, /*wMinor =*/ 1>,
+	public IDispatchImpl<IExplorer7FixesBHO, &IID_IExplorer7FixesBHO, &LIBID_Explorer7FixesLib, /*wMajor =*/ 1, /*wMinor =*/ 2>,
 	public IDispEventImpl<1,CExplorerBHO,&DIID_DWebBrowserEvents2,&LIBID_SHDocVw,1,1>
 {
 public:

@@ -52,6 +52,7 @@ should then log out and log back on.
 
 ## History
 
+* v1.0.0.2 - Fixed an issue (#2) where BHO was being listed as an addon in IE.
 * v1.0.0.1 - Fixed an issue (#1) where folder icon-size was being reset.
 * v1.0.0.0 - First public release.
 

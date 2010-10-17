@@ -23,8 +23,8 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,1
- PRODUCTVERSION 1,0,0,1
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -41,12 +41,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Ian Prest"
             VALUE "FileDescription", ""
-            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "FileVersion", "1, 0, 0, 2"
             VALUE "InternalName", "Explorer7Fixes.dll"
             VALUE "LegalCopyright", "Copyright (C) 2010 Ian Prest"
             VALUE "OriginalFilename", "Explorer7Fixes.dll"
             VALUE "ProductName", "Explorer7Fixes"
-            VALUE "ProductVersion", "1, 0, 0, 1"
+            VALUE "ProductVersion", "1, 0, 0, 2"
         END
     END
     BLOCK "VarFileInfo"
